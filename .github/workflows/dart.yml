@@ -11,9 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      # ✅ Use Flutter dev version (supports Dart 3.10+)
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.2'  # ✅ updated Flutter version
+          flutter-version: '3.38.0-0.2.pre'
+          channel: 'dev'
           architecture: x64
 
       - run: flutter pub get
